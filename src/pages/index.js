@@ -2,6 +2,23 @@ import { Chat } from "@/components/Chat";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 
+import { db } from "@/firebase";
+import {
+  collection,
+  query,
+  doc,
+  getDocs,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  orderBy,
+  where
+} from "firebase/firestore";
+import { text } from "stream/consumers";
+import { string } from "prop-types";
+
+const chatCollection=collection(db, "chat")
+
 export default function Home() {
   /*
     메시지 목록을 저장하는 상태로, 메시지의 형태는 다음과 같음
@@ -31,11 +48,20 @@ export default function Home() {
 
   // 메시지를 전송하는 함수
   const handleSend = async (message) => {
+    const docRef = await addDoc(chatCollection,{ 
+      role: message.user, content: message.content });
+    setMessages([...messages, { id: docRef.id,  role: message.user, content: message.content}])
+
+
+
     // message 를 받아 메시지 목록에 추가
+
+
+
     // message 형태 = { role: "user", content: string }
     // ChatInput.js 26번째 줄 참고
     const updatedMessages = [...messages, message];
-    // console.log(updatedMessages);
+    console.log(updatedMessages);
     // console.log(updatedMessages.slice(-6));
 
     setMessages(updatedMessages);
