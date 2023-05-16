@@ -14,8 +14,6 @@ import {
   orderBy,
   where
 } from "firebase/firestore";
-import { text } from "stream/consumers";
-import { string } from "prop-types";
 
 const chatCollection=collection(db, "chat")
 
@@ -49,12 +47,8 @@ export default function Home() {
   // 메시지를 전송하는 함수
   const handleSend = async (message) => {
     const docRef = await addDoc(chatCollection,{ 
-      role: message.user, content: message.content });
-    setMessages([...messages, { id: docRef.id,  role: message.user, content: message.content}])
-
-
-
-    // message 를 받아 메시지 목록에 추가
+      role: message.role, content: message.content });
+        // message 를 받아 메시지 목록에 추가
 
 
 
@@ -94,6 +88,8 @@ export default function Home() {
     }
 
     console.log(result);
+      const docReff = await addDoc(chatCollection,{ 
+        role: result.role, content: result.content });
 
     // 로딩 상태를 해제하고, 메시지 목록에 응답을 추가
     setLoading(false);
