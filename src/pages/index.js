@@ -80,7 +80,7 @@ export default function Home() {
     setMessages([
       {
         role: "assistant",
-        content: "안녕? 나는 엘리엇이야. 오늘은 무슨 일이 있었니?",
+        content: "안녕? 나는 다니엘이야. 오늘은 무슨 재미있는 일이 있었니?",
       },
     ]);
   };
