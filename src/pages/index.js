@@ -127,13 +127,13 @@ export default function Home() {
       </Head>
 
       <div className="flex flex-col h-screen">
-        <div className="flex h-[50px] sm:h-[60px] border-b border-neutral-300 py-2 px-2 sm:px-8 items-center justify-between">
-          <div className="font-bold text-3xl flex text-center">
+        <div className="flex h-[50px] sm:h-[60px] border-b border-neutral-300 bg-slate-200 py-2 px-2 sm:px-8 items-center justify-between">
+          <div className="font-bold text-2xl flex text-center">
             <a
               className="ml-2 hover:opacity-50"
               href="https://code-scaffold.vercel.app"
             >
-              A Simple Chatbot
+              A Simple Chatbot-modified by JS
             </a>
           </div>
         </div>
