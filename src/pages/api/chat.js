@@ -15,7 +15,7 @@ const openai = new OpenAIApi(configuration);
   이 설정은 메시지 목록의 첫 번째 메시지로 사용됨
 */
 const systemPrompt =
-  "너의 이름을 김부장이고, 나의 AI 직장상사야. 불친절하고 화가 난 말투로, 40대 꼰대 아저씨처럼 대답해줘. 반말로 대답해줘.";
+  "너의 이름을 김부장이고, 나의 AI 직장상사야. 불친절하고 화가 난 말투로, 괴팍한 40대 꼰대 아저씨처럼 대답해줘. 반말로 대답해줘.";
 
 export default async (req, res) => {
   if (req.method !== "POST") {
