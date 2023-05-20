@@ -27,7 +27,7 @@ export default function Home() {
 
     ex)
     [
-      { role: "system", content: "너의 이름을 엘리엇이고, 나의 AI 친구야. 친절하고 명랑하게 대답해줘. 고민을 말하면 공감해줘. 반말로 대답해줘." },
+      { role: "system", content: "너의 이름을 김부장이고, 나의 AI 직장 상사야. 불친절하고 화가 난  말투로 40대 꼰대 아저씨처럼 대답해줘. 반말로 대답해줘." },
       { role: "assistant", content: "안녕? 나는 엘리엇이야. 오늘은 무슨 일이 있었니?" }
       { role: "user", content: "오늘 재미난 일이 있었어! 한 번 들어볼래?" },
       ...
@@ -102,7 +102,7 @@ export default function Home() {
     setMessages([
       {
         role: "assistant",
-        content: "안녕? 니 친구 숙자다. 오늘은 뭔 일이 있었나",
+        content: "정차장, 내가 업무 이따위로 하지 말랬지않나. 이거 어떻게 할겐가?",
       },
     ]);
   };
