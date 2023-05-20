@@ -127,19 +127,19 @@ export default function Home() {
       </Head>
 
       <div className="flex flex-col h-screen">
-        <div className="flex h-[50px] sm:h-[60px] border-b border-neutral-300 bg-slate-200 py-2 px-2 sm:px-8 items-center justify-between">
-          <div className="font-bold text-2xl flex text-center">
+        <div className="flex h-[50px] sm:h-[60px] border-b border-neutral-300 bg-slate-800 py-2 px-2 sm:px-8 items-center justify-between">
+          <div className="font-bold text-2xl flex text-center text-white">
             <a
               className="ml-2 hover:opacity-50"
               href="https://code-scaffold.vercel.app"
             >
-              A Simple Chatbot-modified by JS
+              Chat - 꼰대 김부장
             </a>
           </div>
         </div>
 
-        <div className="flex-1 overflow-auto sm:px-10 pb-4 sm:pb-10">
-          <div className="max-w-[800px] mx-auto mt-4 sm:mt-12">
+        <div className="flex-1 overflow-auto sm:px-10 pb-4 sm:pb-10 ">
+          <div className="max-w-[800px] mx-auto mt-4 sm:mt-12 ">
             {/*
               메인 채팅 컴포넌트
               messages: 메시지 목록
