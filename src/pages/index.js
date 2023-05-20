@@ -102,7 +102,7 @@ export default function Home() {
     setMessages([
       {
         role: "assistant",
-        content: "안녕? 나는 다니엘이야. 오늘은 무슨 재미있는 일이 있었니?",
+        content: "안녕? 니 친구 숙자다. 오늘은 뭔 일이 있었나",
       },
     ]);
   };
